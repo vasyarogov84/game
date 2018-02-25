@@ -2,5 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
+import Obj from './components/object.js';
 
-ReactDOM.render(<p>This is my boilerplate</p>, document.getElementById('app'));
+let appear = true;
+setTimeout(() => {
+    if (appear) {
+        ReactDOM.render( <Obj />, document.getElementById('app'));
+    } 
+    appear = false;
+},2000);
+
+if (!appear)  {
+    ReactDOM.render( <Obj />, document.getElementById('app'));
+}
+
+
+
